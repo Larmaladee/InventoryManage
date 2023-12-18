@@ -1,0 +1,48 @@
+﻿<Window x:Class="InventoryManage.TehMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManage"
+        mc:Ignorable="d"
+        Title="TehMenu" Height="450" Width="800">
+    <Grid Background="#C8D1FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="exit" Click="exit_Click" Background="#97A6F4" Content="Выйти" FontFamily="Manrope" Foreground="White" Grid.Row="0" Grid.Column="0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <DataGrid x:Name="Applications" SelectionChanged="Applications_SelectionChanged" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="7"/>
+        <ComboBox SelectionChanged="status_SelectionChanged" x:Name="status" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox SelectionChanged="class_SelectionChanged" x:Name="classes" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2"/>
+
+        <ComboBox  x:Name="statusChange" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button x:Name="change" Background="#97A6F4" Content="Изменить статус" FontFamily="Manrope" Foreground="White" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3" Click="change_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
